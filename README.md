@@ -1,17 +1,17 @@
 # Image gallery
 
-> A simple
+> A simple food menu project
 
 ## Table of contents
 
-- [General info](#general-info)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
-- [Status](#status)
-- [Inspiration](#inspiration)
-- [Contact](#contact)
+- [Image gallery](#image-gallery)
+  - [Table of contents](#table-of-contents)
+  - [General info](#general-info)
+  - [Screenshots](#screenshots)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Code Examples](#code-examples)
+  - [Status](#status)
 
 ## General info
 
@@ -20,7 +20,7 @@
 
 ## Screenshots
 
-![Example screenshot]()
+![food menu](./assets/food-menu.png)
 
 ## Technologies
 
@@ -31,31 +31,27 @@
 
 ## Setup
 
-clone the repo and start using the stop watch.
+clone the repo and npm install and start live server
 
 ## Code Examples
 
 ```js
+const loadHandler = () => {
+	data.buttons.forEach((btnData) => {
+		const { id, text } = btnData;
+		const button = createButton('button', 'btn', id, text);
+		dom.btnContainer.append(button);
+	});
 
+	data.menu.forEach((item) => {
+		const createDom = createCard(item);
+		dom.cardContainer.append(createDom);
+	});
+};
+
+export default loadHandler;
 ```
-
-## Features
-
-List of features ready and Todos for future development
-
--
--
--
-
-To-do list:
-
--
--
 
 ## Status
 
-Project is: _in progress_
-
-## Inspiration
-
-## Contact
+Project is: _done_
